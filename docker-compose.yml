@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+ openssl:
+  container_name: openssl
+  image: rpi-openssl
+  volumes:
+   - /etc/ssl/localcerts:/etc/ssl/localcerts
+  environment:
+   - COMMON_NAME=NIBZ
+   - KEY_NAME=autosigned
+
